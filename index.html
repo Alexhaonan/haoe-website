@@ -290,7 +290,7 @@ footer > div:first-child img{width:240px;height:auto;display:block;}
   }
   .cover-eyebrow{font-size:9px;letter-spacing:0.16em;margin-bottom:16px;}
   .logo-card{margin:0 0 12px 0;}
-  .logo-card img{width:min(82vw,330px);}
+  .logo-card img{width:min(62vw,230px);}
   .cover-desc{
     max-width:none;
     font-size:13px;
@@ -309,7 +309,38 @@ footer > div:first-child img{width:240px;height:auto;display:block;}
     line-height:1.85;
     margin-bottom:24px;
   }
-  .brand-values,.logo-showcase,.color-grid,.projects-grid,.app-grid,.dd-wrap,.partners-grid,.incorrect-grid{
+  .brand-values{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+  }
+  .brand-values .value-card:nth-child(3){grid-column:1 / -1;}
+  .logo-showcase{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+  }
+  .color-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+  }
+  .color-grid .color-swatch:nth-child(1){grid-column:1 / -1;}
+  .projects-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    max-width:none;
+    gap:12px;
+  }
+  .app-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+  }
+  .partners-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+  }
+  .incorrect-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+  }
+  .dd-wrap{
     grid-template-columns:1fr;
     gap:10px;
   }
@@ -406,10 +437,6 @@ footer > div:first-child img{width:240px;height:auto;display:block;}
   }
 
   #projects .chapter-header{margin-bottom:22px;}
-  .projects-grid{
-    max-width:none;
-    gap:12px;
-  }
   .project-card{
     grid-column:auto !important;
     grid-row:auto !important;
