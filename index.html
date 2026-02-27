@@ -243,17 +243,254 @@ footer{background:var(--orange);padding:80px 64px;display:grid;grid-template-col
 footer > div:first-child img{width:240px;height:auto;display:block;}
 
 @media(max-width:768px){
-  nav{padding:14px 20px;} .nav-links{display:none;}
-  section{padding:100px 20px 60px;}
-  #cover{grid-template-columns:1fr;padding:100px 20px 60px;} .cover-right{display:none;}
-  .brand-values,.logo-showcase,.color-grid,.projects-grid,.app-grid,.dd-wrap,.partners-grid,.incorrect-grid{grid-template-columns:1fr;}
-  .projects-grid{gap:10px;}
-  .project-card{grid-column:auto !important;grid-row:auto !important;min-height:0;border-radius:0;}
+  nav{
+    padding:12px 14px;
+    gap:12px;
+    background:rgba(10,10,10,0.96);
+  }
+  .nav-logo{
+    font-size:10px;
+    letter-spacing:0.08em;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .nav-links{display:none;}
+
+  section{
+    min-height:auto;
+    padding:88px 14px 44px;
+  }
+  .chapter-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+    margin-bottom:28px;
+    padding-bottom:14px;
+  }
+  .chapter-num{
+    font-size:42px;
+    line-height:0.9;
+    opacity:0.45;
+  }
+  .chapter-title{font-size:9px;letter-spacing:0.16em;}
+  .chapter-name{font-size:30px;line-height:1.02;}
+
+  #cover{
+    min-height:100svh;
+    grid-template-columns:1fr;
+    gap:24px;
+    padding:88px 14px 44px;
+  }
+  #cover::before{
+    top:-140px;
+    right:-160px;
+    width:340px;
+    height:340px;
+  }
+  .cover-eyebrow{font-size:9px;letter-spacing:0.16em;margin-bottom:16px;}
+  .logo-card{margin:0 0 12px 0;}
+  .logo-card img{width:min(82vw,330px);}
+  .cover-desc{
+    max-width:none;
+    font-size:13px;
+    line-height:1.85;
+    margin-bottom:20px;
+  }
+  .tag{
+    margin-right:5px;
+    margin-bottom:7px;
+    font-size:9px;
+    padding:4px 9px;
+  }
+
+  .brand-intro{
+    font-size:15px;
+    line-height:1.85;
+    margin-bottom:24px;
+  }
+  .brand-values,.logo-showcase,.color-grid,.projects-grid,.app-grid,.dd-wrap,.partners-grid,.incorrect-grid{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  .value-card{
+    padding:24px 18px;
+    border-radius:14px;
+  }
+  .value-title{font-size:20px;}
+
+  .logo-panel{
+    min-height:210px;
+    padding:36px 20px;
+    border-radius:14px;
+  }
+  .logo-panel img{max-width:170px;}
+  .panel-tag{
+    bottom:14px;
+    left:16px;
+    font-size:8px;
+  }
+  .clearspace-demo{
+    padding:38px 16px;
+    border-radius:14px;
+  }
+  .clearspace-inner img{width:130px;}
+  .clearspace-box{inset:-30px;}
+  .clearspace-arrows{
+    bottom:-42px;
+    font-size:8px;
+    text-align:center;
+    white-space:normal;
+    width:230px;
+  }
+  .size-chart{
+    gap:18px;
+    padding:24px 16px;
+    border-radius:14px;
+    justify-content:space-between;
+  }
+  .size-chart .size-item:nth-child(1) img{width:106px;}
+  .size-chart .size-item:nth-child(2) img{width:78px;}
+  .size-chart .size-item:nth-child(3) img{width:58px;}
+  .size-label{font-size:8px;line-height:1.6;}
+  .incorrect-item{
+    border-radius:14px;
+    padding:24px 16px;
+  }
+
+  .swatch-fill{
+    height:150px;
+    border-radius:14px 14px 0 0;
+  }
+  .swatch-fill-label{font-size:44px;}
+  .swatch-info{
+    padding:16px;
+    border-radius:0 0 14px 14px;
+  }
+  .prop-bar-row{
+    grid-template-columns:62px 1fr;
+    gap:8px;
+    margin-bottom:8px;
+  }
+  .prop-bar{height:36px;}
+  .prop-seg{font-size:8px;}
+
+  .type-family-header{
+    padding:11px 14px;
+    border-radius:12px;
+    margin-bottom:8px;
+  }
+  .type-row{
+    grid-template-columns:1fr;
+    gap:10px;
+    padding:16px 14px;
+    border-radius:12px;
+    margin-bottom:8px;
+  }
+  .type-meta{font-size:8px;}
+  .type-sample.d1{font-size:34px;}
+  .type-sample.d2{font-size:20px;}
+  .type-sample.zh1{font-size:34px;}
+  .type-sample.zh2{font-size:21px;}
+  .type-sample.zh3{font-size:13px;}
+  .type-spec{
+    text-align:left;
+    white-space:normal;
+  }
+  #typography > div[style*="display:grid"][style*="grid-template-columns:1fr 1fr"]{
+    grid-template-columns:1fr !important;
+    gap:10px !important;
+  }
+  #typography > div[style*="display:grid"][style*="grid-template-columns:1fr 1fr"] > div{
+    border-radius:12px;
+  }
+
+  #projects .chapter-header{margin-bottom:22px;}
+  .projects-grid{
+    max-width:none;
+    gap:12px;
+  }
+  .project-card{
+    grid-column:auto !important;
+    grid-row:auto !important;
+    min-height:0;
+    border-radius:14px;
+  }
   .project-card::before{padding-top:133.333%;}
-  .project-card:nth-child(1)::before{padding-top:38%;}
+  .project-card:nth-child(1){grid-column:1 / -1 !important;}
+  .project-card:nth-child(1)::before{padding-top:52%;}
   .project-card:nth-child(n+2)::before{padding-top:133.333%;}
-  .type-row{grid-template-columns:1fr;gap:12px;}
-  footer{grid-template-columns:1fr;} .footer-meta{text-align:left;}
+  .project-thumb-overlay{
+    padding:12px 12px 60px 12px;
+  }
+  .project-thumb-text{
+    font-size:11px;
+    line-height:1.22;
+  }
+  .project-thumb > img{
+    top:10px;
+    left:10px;
+    width:44px;
+  }
+  .project-info{padding:14px 14px 13px;}
+  .project-name{font-size:13px;}
+  .project-desc{
+    font-size:11px;
+    -webkit-line-clamp:3;
+  }
+
+  .partners-section{margin-top:34px;}
+  .partners-label{margin-bottom:12px;}
+  .partner-card{
+    min-height:62px;
+    padding:16px 12px;
+    border-radius:10px;
+  }
+  .partner-name{
+    font-size:10px;
+    line-height:1.55;
+  }
+
+  .app-bg{
+    aspect-ratio:16/10;
+    border-radius:14px 14px 0 0;
+  }
+  .app-info{
+    padding:13px 14px;
+    border-radius:0 0 14px 14px;
+  }
+
+  .dd-col-header{
+    padding:11px 14px;
+    font-size:9px;
+    letter-spacing:0.12em;
+    border-radius:12px;
+    margin-bottom:8px;
+  }
+  .dd-item{
+    padding:14px;
+    border-radius:12px;
+    margin-bottom:8px;
+    gap:10px;
+  }
+  .dd-text{font-size:12px;line-height:1.6;}
+
+  footer{
+    padding:44px 14px;
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+  footer > div:first-child img{width:170px;}
+  .footer-year{
+    font-size:50px;
+    margin-bottom:8px;
+  }
+  .footer-meta{
+    text-align:left;
+    font-size:9px;
+    line-height:1.9;
+    letter-spacing:0.08em;
+  }
 }
 </style>
 </head>
